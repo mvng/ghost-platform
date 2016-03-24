@@ -1,0 +1,16 @@
+.thumbnails {
+  list-style: none;
+  padding-left: 0px;
+}
+.thumbnails li {
+    margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.recent-post img {
+  height: 80px;
+  width: 80px;
+}
+.caption {
+  padding-left: 0;
+}
