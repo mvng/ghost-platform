@@ -1,0 +1,69 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+</header>
+
+<main class="content row" role="main">
+<div class="col-md-7">
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <h1 class="post-title"><strong>{{title}}</strong></h1>
+            {{! Everything inside the #author tags pulls data from the author }}
+            {{#author}}
+
+                {{#if image}}
+                <figure class="author-image">
+                    <a class="img img-responsive" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                </figure>
+                {{/if}}
+
+                <section class="author">
+                    <h5><a href="{{url}}">{{name}}</a></h5>
+                </section>
+
+            {{/author}}
+            <section class="post-meta">
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> Last Updated: {{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+            </section>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+        <footer class="post-footer">
+
+        </footer>
+
+    </article>
+    </div>
+    <div class="col-md-2 col-md-offset-1">
+    <div class="row">
+ 
+    </div>
+    <div class="row">
+{{#get "posts" limit="3" as |recents|}}
+<section class="recent-posts">
+  <h3>Recent posts</h3>
+  <ol>
+    {{#foreach recents}}
+    <li><a href="{{url}}">{{title}}</a></li>
+    {{/foreach}}
+  </ol>
+</section>
+{{/get}}
+</div>
+<div class="row">
+Facebook Like Widget
+</div>
+        </div>
+</main>
+
+{{/post}}
