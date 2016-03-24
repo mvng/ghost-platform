@@ -14,3 +14,16 @@
 .caption {
   padding-left: 0;
 }
+
+.feature-thumbnail {
+  height: 200px;
+  width: 100%;
+}
+.headline {
+  padding-top: 5px;
+  padding-bottom: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-left: none;
+    border-right: none;
+}

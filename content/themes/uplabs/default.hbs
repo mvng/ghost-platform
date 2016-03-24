@@ -12,14 +12,15 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    <link rel="shortcut icon" href="{{asset "img/favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/css/posts.css">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" type="text/css" href="{{asset "css/posts.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/nav.css"}}" />
+
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     {{! Ghost outputs important style and meta data with this tag }}
@@ -27,11 +28,11 @@
 </head>
 <body class="{{body_class}} nav-closed">
 
-
+<br>
     <div class="container">
     <div class="row">
         <div class="col-xs-10">
-        logo here
+        <img src="{{asset "img/logo.png"}}" />
         </div>
         <div class="col-xs-2">
         <section class="share">
@@ -50,6 +51,7 @@
         </section>        
         </div>
     </div>
+    <br>
 {{navigation}}
 
         {{! Everything else gets inserted here }}
@@ -67,14 +69,14 @@
     </div>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/jquery-1.12.0.min.js"}}"></script>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
 
 </body>
 </html>
