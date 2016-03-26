@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="{{asset "css/posts.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/nav.css"}}" />
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
@@ -31,10 +31,10 @@
 <br>
     <div class="container">
     <div class="row">
-        <div class="col-xs-10">
-        <img src="{{asset "img/logo.png"}}" />
+        <div class="col-md-10">
+        <img class="img-responsive" src="{{asset "img/logo.png"}}" />
         </div>
-        <div class="col-xs-2">
+        <div class="col-md-2 hidden-xs">
         <section class="share">
             <a class="fa fa-twitter-square fa-2x" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -58,7 +58,7 @@
         {{{body}}}
         <div class="row">
         <footer class="site-footer clearfix">
-        <div class="col-xs-12">{{navigation}}
+        <div class="col-xs-12 hidden-xs">{{navigation}}
 </div>
         <div class="col-xs-6 col-xs-offset-3">
             <section class="copyright text-center"><a>About Us</a>&nbsp;<a>Privacy</a>&nbsp;<a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
