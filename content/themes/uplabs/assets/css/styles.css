@@ -30,15 +30,25 @@
     border-left: none;
     border-right: none;
 }
-.unified-index-row {
+.unified-index-row-150 {
   height: 150px;
-  border-width: 1px;
-  border-style: solid;
 }
 .index-post-row {
    width: 130px;
    height: 130px; 
  }
+ .index-post-caption {
+   padding-left: 30px;
+ }
+ .headline-caption {
+   margin-left: 0px;
+   float: right;
+ }
+.feat-row-caption{
+  margin-left: 10px;
+}
+
+
  /* Index CSS Styling */
 @media (max-width: 970px) {
   .post-content img {

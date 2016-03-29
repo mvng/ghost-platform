@@ -1,16 +1,12 @@
-{{! Previous/next page links - only displayed on page 2+ }}
-<div class="extra-pagination inner">
-    {{pagination}}
-</div>
 
 {{! This is the post loop - each post will be output using this markup }}
 <h4>TOP HEADLINES</h4>
 {{#foreach posts}}
-<div class="row unified-index-row">
-    <div class="col-md-4">
+<div class="row unified-index-row-150">
+    <div class="col-md-2">
     <img class="index-post-row" src="{{image}}">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-10 index-post-caption">
     <article class="{{post_class}}">
         <header class="post-header">
             <h4 class="post-title"><a href="{{url}}">{{{title}}}</a></h4>
@@ -23,6 +19,7 @@
         </footer>
     </article>
     </div>
+    <hr>
 </div>
 {{/foreach}}
 
