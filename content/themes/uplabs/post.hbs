@@ -39,7 +39,6 @@
         </section>
 
         <footer class="post-footer">
-
         </footer>
 
     </article>
@@ -48,12 +47,12 @@
     <div class="row">
     <div class="col-md-12">
     <h4 class="headline">TOP WAYS TO SAVE MONEY</h4>
- {{#get "posts" limit="1" as |featured|}}
- {{#foreach featured}}
- <img class="feature-thumbnail" src={{image}} />
- <h5><strong>{{title}}</strong></h5>
- {{/foreach}}
-{{/get}}
+   {{#get "posts" filter="featured:true+id:-{{id}}" limit="1"}}
+     {{#foreach posts}}
+     <img class="feature-thumbnail" src={{image}} />
+     <h5><strong>{{title}}</strong></h5>
+     {{/foreach}}
+  {{/get}}
     </div>
     </div>
     <div class="row">
@@ -61,7 +60,7 @@
 
 
 
-{{#get "posts" limit="5" as |recents|}}
+{{#get "posts" filter="featured:false+id:-{{id}}" limit="5" as |recents|}}
 <div class="row">
 <div class="col-md-12">
 <h4 class="headline">YOU MIGHT ALSO LIKE</h4>
@@ -98,8 +97,12 @@
 </div>
 <div class="row">
 <div class="col-md-12">
-Facebook Like Widget
-</div>
+<div class="fb-page"
+  data-href="http://www.facebook.com/yourfinancialassistant.info/" 
+  data-width="340"
+  data-hide-cover="false"
+  data-show-facepile="false"></div>
+      </div>  </div>
 </div>
         </div>
 </main>

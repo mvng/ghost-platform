@@ -25,9 +25,19 @@
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+
+    <div id="fb-root"></div>
+
 </head>
 <body class="{{body_class}} nav-closed">
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=745334705577097";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <br>
     <div class="container">
     <div class="row">
@@ -73,9 +83,9 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+<!--     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+ -->    {{! The main JavaScript file for Casper }}
+    <!-- <script type="text/javascript" src="{{asset "js/index.js"}}"></script> -->
     <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
 
 </body>
