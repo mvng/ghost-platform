@@ -1,7 +1,8 @@
 
 {{! This is the post loop - each post will be output using this markup }}
-
 {{#foreach posts}}
+{{log this}}
+
   {{#if @first}}
   <div class="feat-row">
   <div class="row">
@@ -31,9 +32,6 @@
         <section class="post-excerpt">
             <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
         </section>
-        <footer class="post-meta">
-            {{tags prefix=" on "}}
-        </footer>
     </article>
     </div>
     <hr>
