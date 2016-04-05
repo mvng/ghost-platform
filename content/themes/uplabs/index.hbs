@@ -17,8 +17,8 @@
 
    {{#get "posts" filter="featured:true" limit="1"}}
      {{#foreach posts}}
-     <img class="feature-thumbnail" src={{image}} />
-     <h5><strong>{{title}}</strong></h5>
+     <a href="{{url}}"><img class="feature-thumbnail" src={{image}} />
+     <h5><strong>{{title}}</strong></h5></a>
      {{/foreach}}
   {{/get}}
       <div class="fb-page"
