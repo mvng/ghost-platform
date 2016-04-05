@@ -1,7 +1,24 @@
 
 {{! This is the post loop - each post will be output using this markup }}
-<h4>TOP HEADLINES</h4>
+
 {{#foreach posts}}
+  {{#if @first}}
+  <div class="feat-row">
+  <div class="row">
+  <a href="{{url}}"><div class="col-md-5">
+    <img class="pull-left" src={{image}} />
+    </div>
+    <div class="col-md-7">
+    <div class="feat-row-caption pull-right">
+      <h4>{{title}}</h4>
+      <p>{{excerpt words="50"}} <a class="read-more" href="{{url}}">&raquo;</a></p>               
+      </div>
+    </div>
+    </div>
+    </a>
+  </div>
+  <h4>TOP HEADLINES</h4>
+  {{else}} 
 <div class="row unified-index-row-150">
     <div class="col-md-2">
     <img class="index-post-row" src="{{image}}">
@@ -21,6 +38,7 @@
     </div>
     <hr>
 </div>
+{{/if}}
 {{/foreach}}
 
 {{! Previous/next page links - displayed on every page }}
