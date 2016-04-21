@@ -67,14 +67,18 @@
         {{! Everything else gets inserted here }}
         {{{body}}}
         <div class="row">
-        <footer class="site-footer clearfix">
-        <div class="col-xs-12 hidden-xs">{{navigation}}
-</div>
-        <div class="col-xs-6 col-xs-offset-3">
-            <section class="copyright text-center"><a>About Us</a>&nbsp;<a>Privacy</a>&nbsp;<a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby text-center">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        
+        </div>
+    </div>
+    <div style="background-color: gray;"class="container-fluid">
+        <div class="row">
+            <footer class="site-footer clearfix">
+            <div class="col-xs-12 hidden-xs nav-footer">{{navigation}}
             </div>
-        </footer>
+            <div class="col-xs-6 col-xs-offset-3">
+                <section class="copyright text-center"><strong><a class="white" href="{{@blog.url}}">&copy; {{date format="YYYY"}} YourFinancialAssistant</a>&nbsp;<a class="white">About Us</a>&nbsp;<a class="white">Privacy</a>&nbsp;</strong></section>
+                </div>
+            </footer>
         </div>
     </div>
 

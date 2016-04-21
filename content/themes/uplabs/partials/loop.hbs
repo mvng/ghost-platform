@@ -1,41 +1,33 @@
 
 {{! This is the post loop - each post will be output using this markup }}
-{{#foreach posts}}
-{{log this}}
 
-  {{#if @first}}
+{{#foreach posts filter="featured:false"}}
+{{#if @first}}
   <div class="feat-row">
-  <div class="row">
-  <a href="{{url}}"><div class="col-md-5">
-    <img class="pull-left" src={{image}} />
-    </div>
-    <div class="col-md-7">
-    <div class="feat-row-caption pull-right">
-      <h4>{{title}}</h4>
-      <p>{{excerpt words="50"}} <a class="read-more" href="{{url}}">&raquo;</a></p>               
+      <div class="row">
+              <div class="col-md-5">
+                 <a href="{{url}}"><img class="img-responsive pull-left" src={{image}} /></a>
+              </div>
+              <div class="col-md-7">
+                <div class="feat-row-caption pull-right">
+                   <a href="{{url}}"><h3><strong>{{title}}</strong></h3></a>
+                    <p>{{excerpt words="50"}}<a class="read-more" href="{{url}}"> &raquo;</a></p>               
+                </div>
+              </div>
       </div>
-    </div>
-    </div>
-    </a>
   </div>
-  <h4>TOP HEADLINES</h4>
-  {{else}} 
-<div class="row unified-index-row-150">
-    <div class="col-md-2">
-    <img class="index-post-row" src="{{image}}">
+  <h4 class="headline">TOP HEADLINES</h4>
+{{else}} 
+  <div style="margin-bottom:10px;" class="row ">
+    <div class="col-md-3">
+      <img height="130"class="img-responsive" src="{{image}}">
     </div>
-    <div class="col-md-10 index-post-caption">
-    <article class="{{post_class}}">
-        <header class="post-header">
-            <h4 class="post-title"><a href="{{url}}">{{{title}}}</a></h4>
-        </header>
-        <section class="post-excerpt">
-            <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-        </section>
-    </article>
+    <div class="col-md-9">
+          <a href="{{url}}"><h4 class="post-title"><strong>{{{title}}}</strong></h4></a>
+          <p>{{excerpt words="56"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
     </div>
-    <hr>
-</div>
+    <div class="col-md-12"><hr></div>
+  </div>
 {{/if}}
 {{/foreach}}
 

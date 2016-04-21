@@ -11,20 +11,39 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
-        mail: {},
+        url: process.env.HEROKU_URL,
+        mail: {
+            from: '"Chad Munchkins" matthew@consumeralerts.com',
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: process.env.MAILGUN_SMTP_LOGIN,
+                    pass: process.env.MAILGUN_SMTP_PASSWORD
+                }
+            }},        
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
-            debug: false
-        },
-
+                  host: 'ec2-54-235-94-236.compute-1.amazonaws.com',
+                  user: 'tkfpajlapxpovi',
+                  password: 'miWBlpkb4gNnVWQhUNMeAnsk9d',
+                  database: 'db6endet4ni8je',
+                  port: '5432',
+                  ssl: true
+            },},
         server: {
-            host: '127.0.0.1',
-            port: '2368'
-        }
+            host: '0.0.0.0',
+            port: process.env.PORT },
+        storage: {
+                active: 'ghost-s3',
+                'ghost-s3': {
+                    accessKeyId: 'AKIAJEIC4DCVJBHYREUA',
+                    secretAccessKey: 'cjYSE8AYubQioui/9RTkajRywRCfh2p5oUBc6ZW5', 
+                    bucket: 'yourfinancialassistant', 
+                    region: 'us-west', 
+                    assetHost: 's3.amazonaws.com' 
+                } }
     },
 
     // ### Development **(default)**

@@ -30,9 +30,9 @@
     border-left: none;
     border-right: none;
 }
-.unified-index-row-150 {
+/*.unified-index-row-150 {
   height: 150px;
-}
+}*/
 .index-post-row {
    width: 130px;
    height: 130px; 
@@ -47,9 +47,35 @@
 .feat-row-caption{
   margin-left: 10px;
 }
+.bottom-border {
+    border-style: solid;
+    border-width: 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+a.white {
+  color: white;
+}
+.site-footer {
+  height: 200px;
+}
+.nav-footer nav {
 
+  background-color: gray;
+  border-color: gray;
 
- /* Index CSS Styling */
+}
+.nav-footer a {
+  color: white !important;
+  font-weight: bolder;
+  font-size: 15px;
+  padding: 0;
+
+}
+.nav-footer li a{
+  padding: 10px;
+}
 @media (max-width: 970px) {
   .post-content img {
     width: 100%;
