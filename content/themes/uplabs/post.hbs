@@ -70,7 +70,11 @@
     <a href={{url}}><li class="span4">
       <div class="recent-post right-caption span4">
       <div class="col-xs-3 col-sm-5 col-md-4">
-      <img src="{{image}}" width=80 height=80/>
+        <script> 
+          var image = '{{image}}';
+          image = image.replace('upload/','upload/c_scale,h_80,w_80/');
+          document.write("<img src='"+ image + "' alt='Recent Post' height=80 width=80>");      
+        </script>
       </div>
       <div class="col-xs-9 col-sm-7 col-md-8caption">
       {{title}}
