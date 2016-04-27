@@ -78,15 +78,14 @@
     </div>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="{{asset "js/jquery-1.12.0.min.js"}}"></script>
+    <script async type="text/javascript" src="{{asset "js/jquery-1.12.0.min.js"}}"></script>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
 <!--     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
  -->    {{! The main JavaScript file for Casper }}
     <!-- <script type="text/javascript" src="{{asset "js/index.js"}}"></script> -->
-    <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
-    <noscript id="deferred-styles">
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>    <noscript id="deferred-styles">
         <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
