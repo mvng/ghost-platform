@@ -36,14 +36,13 @@ config = {
             host: '0.0.0.0',
             port: process.env.PORT },
         storage: {
-                active: 'ghost-s3',
-                'ghost-s3': {
-                    accessKeyId: 'AKIAJEIC4DCVJBHYREUA',
-                    secretAccessKey: 'cjYSE8AYubQioui/9RTkajRywRCfh2p5oUBc6ZW5', 
-                    bucket: 'yourfinancialassistant', 
-                    region: 'us-west', 
-                    assetHost: 's3.amazonaws.com' 
-                } }
+            active: 'ghost-cloudinary-store',
+            'ghost-cloudinary-store': {
+                cloud_name: 'uplabsllc',
+                api_key: process.env.CLOUDINARY_API_KEY,
+                api_secret: process.env.CLOUDINARY_SECRET_KEY
+            }
+        }
     },
 
     // ### Development **(default)**
