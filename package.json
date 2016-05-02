@@ -44,7 +44,6 @@
     "fs-extra": "0.26.5",
     "ghost-cloudinary-store": "^1.1.2",
     "ghost-gql": "0.0.4",
-    "ghost-s3-storage": "^0.2.2",
     "glob": "5.0.15",
     "html-to-text": "1.6.0",
     "intl": "1.0.1",
