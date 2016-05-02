@@ -377,15 +377,15 @@
             }
           }
         },
-        "domelementtype": {
-          "version": "1.1.3",
-          "from": "https://registry.npmjs.org/domelementtype/-/domelementtype-1.1.3.tgz",
-          "resolved": "https://registry.npmjs.org/domelementtype/-/domelementtype-1.1.3.tgz"
-        },
         "domutils": {
           "version": "1.5.1",
           "from": "https://registry.npmjs.org/domutils/-/domutils-1.5.1.tgz",
           "resolved": "https://registry.npmjs.org/domutils/-/domutils-1.5.1.tgz"
+        },
+        "domelementtype": {
+          "version": "1.1.3",
+          "from": "https://registry.npmjs.org/domelementtype/-/domelementtype-1.1.3.tgz",
+          "resolved": "https://registry.npmjs.org/domelementtype/-/domelementtype-1.1.3.tgz"
         }
       }
     },
@@ -941,6 +941,30 @@
         }
       }
     },
+    "ghost-cloudinary-store": {
+      "version": "1.1.2",
+      "from": "ghost-cloudinary-store@latest",
+      "resolved": "https://registry.npmjs.org/ghost-cloudinary-store/-/ghost-cloudinary-store-1.1.2.tgz",
+      "dependencies": {
+        "cloudinary": {
+          "version": "1.2.6",
+          "from": "cloudinary@>=1.2.0 <1.3.0",
+          "resolved": "https://registry.npmjs.org/cloudinary/-/cloudinary-1.2.6.tgz",
+          "dependencies": {
+            "q": {
+              "version": "1.4.1",
+              "from": "q@>=1.4.0 <1.5.0",
+              "resolved": "https://registry.npmjs.org/q/-/q-1.4.1.tgz"
+            },
+            "chunking-streams": {
+              "version": "0.0.8",
+              "from": "chunking-streams@0.0.8",
+              "resolved": "https://registry.npmjs.org/chunking-streams/-/chunking-streams-0.0.8.tgz"
+            }
+          }
+        }
+      }
+    },
     "ghost-gql": {
       "version": "0.0.4",
       "from": "https://registry.npmjs.org/ghost-gql/-/ghost-gql-0.0.4.tgz",
@@ -948,46 +972,46 @@
     },
     "ghost-s3-storage": {
       "version": "0.2.2",
-      "from": "ghost-s3-storage@latest",
+      "from": "https://registry.npmjs.org/ghost-s3-storage/-/ghost-s3-storage-0.2.2.tgz",
       "resolved": "https://registry.npmjs.org/ghost-s3-storage/-/ghost-s3-storage-0.2.2.tgz",
       "dependencies": {
         "aws-sdk": {
           "version": "2.3.4",
-          "from": "aws-sdk@>=2.1.6 <3.0.0",
+          "from": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.3.4.tgz",
           "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.3.4.tgz",
           "dependencies": {
             "sax": {
               "version": "1.1.5",
-              "from": "sax@1.1.5",
+              "from": "https://registry.npmjs.org/sax/-/sax-1.1.5.tgz",
               "resolved": "https://registry.npmjs.org/sax/-/sax-1.1.5.tgz"
             },
             "xml2js": {
               "version": "0.4.15",
-              "from": "xml2js@0.4.15",
+              "from": "https://registry.npmjs.org/xml2js/-/xml2js-0.4.15.tgz",
               "resolved": "https://registry.npmjs.org/xml2js/-/xml2js-0.4.15.tgz"
             },
             "xmlbuilder": {
               "version": "2.6.2",
-              "from": "xmlbuilder@2.6.2",
+              "from": "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-2.6.2.tgz",
               "resolved": "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-2.6.2.tgz",
               "dependencies": {
                 "lodash": {
                   "version": "3.5.0",
-                  "from": "lodash@>=3.5.0 <3.6.0",
+                  "from": "https://registry.npmjs.org/lodash/-/lodash-3.5.0.tgz",
                   "resolved": "https://registry.npmjs.org/lodash/-/lodash-3.5.0.tgz"
                 }
               }
             },
             "jmespath": {
               "version": "0.15.0",
-              "from": "jmespath@0.15.0",
+              "from": "https://registry.npmjs.org/jmespath/-/jmespath-0.15.0.tgz",
               "resolved": "https://registry.npmjs.org/jmespath/-/jmespath-0.15.0.tgz"
             }
           }
         },
         "when": {
           "version": "3.7.7",
-          "from": "when@>=3.6.4 <4.0.0",
+          "from": "https://registry.npmjs.org/when/-/when-3.7.7.tgz",
           "resolved": "https://registry.npmjs.org/when/-/when-3.7.7.tgz"
         }
       }
@@ -1519,7 +1543,7 @@
           "dependencies": {
             "core-util-is": {
               "version": "1.0.2",
-              "from": "core-util-is@>=1.0.0 <1.1.0",
+              "from": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
               "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz"
             },
             "isarray": {
