@@ -1,1 +1,1 @@
-//module.exports = require('ghost-cloudinary-store');
+module.exports = require('ghost-cloudinary-store');
