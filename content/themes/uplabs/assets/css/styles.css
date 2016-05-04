@@ -76,6 +76,11 @@ a.white {
 .nav-footer li a{
   padding: 10px;
 }
+/*.post-content p img {
+  width: 100%;
+  float: right;
+}
+*/
 @media (max-width: 970px) {
   .post-content img {
     width: 100%;
